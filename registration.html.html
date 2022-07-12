@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>VALIDATIONS</title>
+        <style>
+            label{
+               color:black;
+               font-style:italic ;
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+               font-size:20px;
+            }
+            div{
+                overflow-y:scroll;
+                width: 500px;
+                height: 450px;
+                background-image:url(bg10.jpg);
+                border-radius:20px;
+                border:5px groove slategrey;
+            }
+            td{
+                color:black;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            }
+        </style>
+    </head>
+    <body style="background-image:url(bg20.jpg.jpg);">
+    <center>
+    <div id="k">
+        <form action="/jk.php" method="post" onsubmit="return validate();">
+            <h1 style="color:black; font-family: Georgia, 'Times New Roman', Times, serif;"><u>Registration Form</u></h1>
+            <table>
+                <tr><td><label>First Name:</label></td><td><input type="text" name="n" id="first" >*
+                    <label id="l" 
+                    style="color:white;visibility: hidden;">Invalid Data!!!</label></td></tr>
+
+                <tr><td><label>Middle Name:</label></td><td><input type="text"  id="middle"></td></tr>
+
+                <tr><td><label>Last Name:</label></td><td><input type="text"  id="last">*</td></tr>
+
+                <tr><td><label>Full Name:</label></td><td><input type="text" id="fullname" readonly></td></tr>
+
+                <tr><td><label>Mobile:</label></td><td><input type="tel" step="" min="" max="" 
+                    pattern="[0-9]*" maxlength="12" data-name="control" name="mobile" value="""
+                     placeholder="Enter mobile number" data-required="true" data-sync="mobile">
+                   </td></tr>
+                <tr><td><label>Email:</label></td><td><input type="text" id="mail"></td></tr>
+                <tr><td><label>Password:</label></td><td><input type="password" id="p" >*<img src="invisible.jpg" 
+                    width="20px" height="20px" onclick="sp1()" id="img1"></td></tr>
+
+                <tr><td><label>Hobbies:</label></td><td>Reading books<input type="checkbox"  id="c1">Playing games
+                    <input type="checkbox" id="c2">Cooking<input type="checkbox"  id="c3"></td></tr>
+
+                <tr><td><label>Date Of Birth:</label></td><td><input type="date" name="dob" id="dob" 
+                    required> <label id="age"></label></td></tr>
+    
+                <tr><td><label>Address:</label></td><td><textarea rows="3" cols="20" id="address" required></textarea></td></tr>
+
+                <tr><td><label>photo</label></td><td><input type="file" max-size="50000" accept="image/png" required></td></tr>
+                
+                <tr><td></td><td><input type="checkbox" id="agree"><label>I agree to the terms of the company.</label></td></tr>
+                
+                <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr>
+                
+                <tr><td></td><td><input type="reset" name="s" value="Reset" onclick="confirm()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" name="s" value="Register" onclick="confirm()"></td></tr>
+
+            </table>
+    </form>
+    </div>
+</center>
+    <script src="validate.js"></script>
+    </body>
+</html>
